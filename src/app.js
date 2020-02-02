@@ -18,10 +18,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
-app.use('/api', userRouter);
-app.use('/api', protectedRouter);
-app.use('/api', publicRouter);
-app.use('/api', defaultRouter);
+// app.use('/api', userRouter);
+// app.use('/api', protectedRouter);
+// app.use('/api', publicRouter);
+// app.use('/api', defaultRouter);
 
 
 const port = process.env.PORT || 5500;
