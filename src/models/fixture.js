@@ -3,8 +3,8 @@ import pool from '../config/config';
 const fixturesTable = `DROP TABLE IF EXISTS fixtures;
         CREATE TABLE fixtures (
             id SERIAL PRIMARY KEY NOT NULL,
-            hometeam CHARACTER VARYING(255) UNIQUE NOT NULL,
-            awayteam CHARACTER VARYING(255) UNIQUE NOT NULL,
+            hometeam CHARACTER VARYING(255) NOT NULL,
+            awayteam CHARACTER VARYING(255) NOT NULL,
             hometeamscore INTEGER NOT NULL,
             awayteamscore INTEGER NOT NULL,
             matchdate DATE NOT NULL,
