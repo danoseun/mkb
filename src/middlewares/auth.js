@@ -20,15 +20,17 @@ export const verifyToken = (req, res, next) => {
     });
   }
   token = token.split(' ')[1];
-  const redisToken = req.session.token.split(' ')[1];
+  
+  //const redisToken = req.session.token.split(' ')[1];
+  
 
   /**
    * Check if token in the redis store
    * is same as that coming from the request headers
    */
 
-   if(redisToken.localeCompare(token) === 0){
-     //console.log('>>>',redisToken.localeCompare(token));
+  //  if(redisToken.localeCompare(token) === 0){
+     
     jwt.verify(token, process.env.SECRETKEY, (error, authData) => {
 
       if (error) {
@@ -46,13 +48,6 @@ export const verifyToken = (req, res, next) => {
       req.authData = authData;
       return next();
     });
-   }
-   else{
-    return res.status(400).json({
-      status: 400,
-      error: 'Token in the redis store and request headers do not match'
-    });
-   }
    
   
 };
