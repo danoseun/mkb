@@ -1,0 +1,43 @@
+sudo: required
+services:
+  - docker
+
+
+before_install:
+  - docker-compose build
+
+script:
+  - docker-compose up -d
+  - docker-compose down
+
+after_success:
+  - docker build -t oseun/mkb-nginx  ./nginx
+  - docker build -t oseun/mkb-server  .
+
+
+# Login to Docker 
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
+
+# Take images and push them to dockerhub
+
+  - docker push oseun/mkb-nginx
+  - docker push oseun/mkb-server
+
+
+
+
+# Sterling
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: mkb
+  env: Mkb-env 
+  bucket_name: elasticbeanstalk-us-east-2-632874205370
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
