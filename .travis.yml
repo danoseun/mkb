@@ -33,7 +33,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
   name: "mkb"
-  env: "Mkb-env" 
+  env: "mock" 
   bucket_name: "elasticbeanstalk-us-east-2-097267457133"
   bucket_path: "mkb-bucket"
   on:
