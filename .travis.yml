@@ -27,7 +27,7 @@ after_success:
 
 
 
-# Sterling
+# Mkobo
 
 deploy:
   provider: elasticbeanstalk

@@ -1,5 +1,6 @@
 # mock-premier-league-api
 An API that serves the latest scores of fixtures of matches in a “Mock Premier League”
+
 [![Build Status](https://travis-ci.com/danoseun/mkb.svg?branch=master)](https://travis-ci.com/danoseun/mkb)
 
 ## Features
@@ -27,16 +28,22 @@ An API that serves the latest scores of fixtures of matches in a “Mock Premier
 - POSTMAN
 - Mocha/Chai
 - Express
+- AWS
+- JWT
 
 ## Requirements and Installation
 
 To install and run this project you would need to have Node.js installed.
 
 - Create a .env file in the root directory of the cloned project and add the following:
-  - mongodb connection=
+  - Postgres connection string=<HERE>
   - SECRETKEY=<JWT secret key>
   - ROUNDS=<Number of rounds to hash password>
-  - ...
+  - EMAIL=<email of seeded admin>
+-   EMAIL_ONE=<email of seeded user>
+-   EMAIL_TWO=<email of seeded user>
+-   EMAIL_THREE=<email of seeded user>
+-   EMAILL=<email of seeded user>
 
 - To run:
 
