@@ -7,7 +7,7 @@
                 "npm run start:dev"
               ],
             "name":"api",
-            "image":"oseun/mkb-server",
+            "image":"texplode/mkb-server",
             "hostname": "api",
             "essential": false,
             "memory": 128
@@ -28,7 +28,7 @@
           },
         {
             "name":"nginx",
-            "image":"oseun/mkb-nginx",
+            "image":"texplode/mkb-nginx",
             "hostname": "nginx",
             "essential": true,
             "portMappings": [
