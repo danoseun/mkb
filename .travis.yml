@@ -31,11 +31,11 @@ after_success:
 
 deploy:
   provider: elasticbeanstalk
-  region: us-east-2
-  app: mkb
-  env: Mkb-env 
-  bucket_name: elasticbeanstalk-us-east-2-097267457133
-  bucket_path: mkb-bucket
+  region: "us-east-2"
+  name: "mkb"
+  env: "Mkb-env" 
+  bucket_name: "elasticbeanstalk-us-east-2-097267457133"
+  bucket_path: "mkb-bucket"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
