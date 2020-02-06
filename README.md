@@ -40,10 +40,10 @@ To install and run this project you would need to have Node.js installed.
   - SECRETKEY=<JWT secret key>
   - ROUNDS=<Number of rounds to hash password>
   - EMAIL=<email of seeded admin>
--   EMAIL_ONE=<email of seeded user>
--   EMAIL_TWO=<email of seeded user>
--   EMAIL_THREE=<email of seeded user>
--   EMAILL=<email of seeded user>
+  - EMAIL_ONE=<email of seeded user>
+  - EMAIL_TWO=<email of seeded user>
+  - EMAIL_THREE=<email of seeded user>
+  - EMAILL=<email of seeded user>
 
 - To run:
 
