@@ -4,11 +4,11 @@ services:
 
 
 before_install:
-  - docker build -t texplode/mkb-server  .
+  - docker-compose build
 
 script:
-  - docker run texplode/mkb-server
-  # - docker-compose down
+  - docker-compose up -d
+  - docker-compose down
 
 after_success:
   - docker build -t texplode/mkb-nginx  ./nginx
