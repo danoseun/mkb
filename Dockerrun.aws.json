@@ -3,9 +3,6 @@
     "containerDefinitions": [
 
         {
-            "command": [
-                "npm run start:dev"
-              ],
             "name":"api",
             "image":"texplode/mkb-server",
             "hostname": "api",
