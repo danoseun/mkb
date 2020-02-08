@@ -28,7 +28,7 @@ app.use(cookieParser());
 
 app.use(session({
   secret: process.env.SECRETKEY,
-  store: new redisStore({ host: process.env.REDIS_LOCALHOST, port: process.env_REDIS_PORT, client: client, ttl:86400}),
+  store: new redisStore({ host: process.env.REDIS_HOST, port: process.env.REDIS_PORT, client: client, ttl:86400}),
   saveUninitialized: false,
   resave: false
 }))
