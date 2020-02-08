@@ -11,19 +11,6 @@
         },
 
         {
-            "name":"redis",
-            "essential": true,
-            "image": "redis:latest",
-            "memory": 128,
-            "hostname": "redis",
-            "portMappings": [
-              {
-                "containerPort": 6379,
-                "hostPort": 6379
-              }
-            ]
-          },
-        {
             "name":"nginx",
             "image":"texplode/mkb-nginx",
             "hostname": "nginx",
