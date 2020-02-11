@@ -1,4 +1,7 @@
 import express from 'express';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 export const defaultRouter = express.Router();
 
